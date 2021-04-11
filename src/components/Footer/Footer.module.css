@@ -1,0 +1,279 @@
+.footer {
+  background-color: #008184;
+}
+
+.top {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  min-height: 59px;
+}
+
+.logoWrapper {
+  flex-grow: 1;
+  border-right: 1px solid #fff;
+}
+
+.logo {
+  padding: 0 41px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: #235b5f;
+}
+
+.btnsWrapper {
+  display: flex;
+}
+
+.region {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  width: 98px;
+  height: 100%;
+  border-right: 1px solid #fff;
+  cursor: pointer;
+  padding-left: 35px;
+}
+
+.region::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+  width: 12px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./geotag.svg");
+}
+
+.region:hover,
+.region:focus {
+  background-color: #235b5f;
+}
+
+.toTop {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  height: 100%;
+  width: 138px;
+  padding: 2.25em 10px 2.25em 50px;
+
+  cursor: pointer;
+}
+
+.toTop::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./totop.svg");
+}
+
+.toTop:hover,
+.toTop:focus {
+  background-color: #235b5f;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #fff;
+}
+
+.infoMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
+.infoMenu__item {
+  margin-bottom: 20px;
+}
+
+.infoMenu__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.infoMenu__link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.infoMenu__link:hover,
+.infoMenu__link:focus {
+  color: #f1c40f;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+}
+
+.input {
+  width: 308px;
+  height: 41px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 0 1px #fff;
+  padding: 12px;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  margin-right: 11px;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 1px #005c5f;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px #7fcbcd;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+}
+
+.subscribeButton {
+  position: relative;
+  border: 1px solid #235b5f;
+  background-color: #235b5f;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 21px;
+  border-radius: 25px;
+  cursor: pointer;
+  top: 0;
+  transition: top 0.1s linear;
+}
+
+.subscribeButton:hover,
+.subscribeButton:focus {
+  top: 3px;
+}
+
+.socialWrapper {
+  width: 300px;
+  margin-right: 25px;
+}
+
+.socialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialItem {
+  width: 41px;
+  height: 41px;
+}
+
+.socialLink {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #235b5f;
+  display: block;
+  box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fb {
+  background-image: url("./fb.svg");
+}
+
+.inst {
+  background-image: url("./inst.svg");
+}
+
+.tw {
+  background-image: url("./tw.svg");
+}
+
+.gh {
+  background-image: url("./gh.svg");
+}
+
+.in {
+  background-image: url("./in.svg");
+}
+
+.yt {
+  background-image: url("./yt.svg");
+}
+
+.fb:hover,
+.fb:focus {
+  background-color: #3b5998;
+}
+
+.inst:hover,
+.inst:focus {
+  background-color: #c13584;
+}
+
+.tw:hover,
+.tw:focus {
+  background-color: #1da1f2;
+}
+
+.gh:hover,
+.gh:focus {
+  background-color: #211f1f;
+}
+
+.in:hover,
+.in:focus {
+  background-color: #2867b2;
+}
+
+.yt:hover,
+.yt:focus {
+  background-color: #c4302b;
+}
+
+.bottom {
+  padding: 25px;
+}
+
+.copy {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+}
