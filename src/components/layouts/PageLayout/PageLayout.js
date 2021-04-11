@@ -1,18 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
+import Header from "../../Header";
+import Footer from "../../Footer";
 
 const PageLayout = ({ children }) => {
   return (
-    <div>
-      <h2>Layout</h2>
+    <>
+      <Header />
       {children}
-    </div>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
 PageLayout.propTypes = {
-  children: PropTypes.any
-}
+  children: PropTypes.any,
+};
 
-export default PageLayout
+export default PageLayout;
