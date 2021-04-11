@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import PageLayout from '../../layouts/PageLayout'
+import PageLayout from "../../layouts/PageLayout";
 
 const Main = () => {
-  return (
-    <PageLayout>
-      Main
-    </PageLayout>
-  )
-}
+  return <PageLayout>Main</PageLayout>;
+};
 
-export default Main
+export default Main;
