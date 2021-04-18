@@ -1,0 +1,32 @@
+.userMenu {
+  display: flex;
+  width: 127px;
+}
+
+.userMenu__item {
+  width: 50%;
+  border-right: 1px solid #fff;
+}
+
+.userMenu__btn {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.userMenu__item:first-of-type .userMenu__btn {
+  background-image: url("./cart.svg");
+}
+
+.userMenu__item:last-of-type .userMenu__btn {
+  background-image: url("./favorites.svg");
+}
+
+.userMenu__btn:hover,
+.userMenu__btn:focus {
+  background-color: #235b5f;
+}
