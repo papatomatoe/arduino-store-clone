@@ -1,0 +1,31 @@
+.toTop {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  height: 100%;
+  width: 138px;
+  padding: 2.25em 10px 2.25em 50px;
+
+  cursor: pointer;
+}
+
+.toTop::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./totop.svg");
+}
+
+.toTop:hover,
+.toTop:focus {
+  background-color: #235b5f;
+}
