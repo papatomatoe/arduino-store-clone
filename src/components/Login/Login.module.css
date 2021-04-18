@@ -1,0 +1,21 @@
+.loginWrapper {
+  width: 108px;
+}
+
+.login {
+  display: block;
+  text-align: center;
+  padding: 2.25em 0;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.login:hover,
+.login:focus {
+  background-color: #235b5f;
+}
