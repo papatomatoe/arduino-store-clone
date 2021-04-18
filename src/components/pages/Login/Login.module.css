@@ -1,0 +1,122 @@
+.page {
+  height: 100vh;
+  background-image: url("../../../static/img/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: contain;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 67.5%;
+  background-color: #ecf1f1;
+  height: 100%;
+}
+
+.back {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+
+  top: 35px;
+  left: 27px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url("./arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.formContainer {
+  width: 236px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+  margin: 27px 0;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  height: 39px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #c8d2d2;
+  padding: 14px 14px 3px 14px;
+  border-radius: 3px;
+  margin-bottom: 27px;
+  color: #262c2e;
+}
+
+.label {
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  letter-spacing: 0.03em;
+  font-style: normal;
+  font-weight: 300;
+  color: #424f54;
+  z-index: 1;
+
+  transition: all 0.1s linear;
+}
+
+.label span {
+  font-weight: 500;
+  color: #e25a4f;
+}
+
+.input:hover {
+  border-color: black;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.1));
+}
+
+.input:focus {
+  outline-color: transparent;
+  border-color: #7fcbcd;
+  filter: none;
+  box-shadow: 0 0 0 2px #7fcbcd;
+}
+
+.input[value=""] + .label {
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+
+.input:focus + .label,
+.input:not([value=""]) + .label {
+  top: 10px;
+  left: 5px;
+}
+
+.submit {
+  border: none;
+  background-color: #6db9b9;
+
+  padding: 7px 15px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 25px;
+  margin: 0 0 0 auto;
+  display: block;
+  cursor: pointer;
+}
