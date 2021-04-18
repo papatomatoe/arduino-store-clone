@@ -1,0 +1,50 @@
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+}
+
+.input {
+  width: 308px;
+  height: 41px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 0 1px #fff;
+  padding: 12px;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  margin-right: 11px;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 1px #005c5f;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px #7fcbcd;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+}
+
+.subscribeButton {
+  position: relative;
+  border: 1px solid #235b5f;
+  background-color: #235b5f;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 21px;
+  border-radius: 25px;
+  cursor: pointer;
+  top: 0;
+  transition: top 0.1s linear;
+}
+
+.subscribeButton:hover,
+.subscribeButton:focus {
+  top: 3px;
+}
