@@ -1,0 +1,26 @@
+.infoMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
+.infoMenu__item {
+  margin-bottom: 20px;
+}
+
+.infoMenu__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.infoMenu__link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.infoMenu__link:hover,
+.infoMenu__link:focus {
+  color: #f1c40f;
+}
