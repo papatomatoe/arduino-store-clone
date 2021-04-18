@@ -1,5 +1,6 @@
 .page {
   height: 100vh;
+  background-color: #ecf1f1;
   background-image: url("../../../static/img/login-bg.jpg");
   background-repeat: no-repeat;
   background-position: 100% center;

@@ -16,11 +16,15 @@ const Login = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <a
-          className={styles.back}
-          onClick={backHandler}
-          aria-label="Back to Previous page"
-        />
+        {
+          // eslint-disable-next-line jsx-a11y/anchor-has-content
+          <a
+            href
+            className={styles.back}
+            onClick={backHandler}
+            aria-label="Back to Previous page"
+          ></a>
+        }
         <div className={styles.formContainer}>
           <img src={logo} alt="Arduino Logo" width="60" height="30" />
           <h1 className={styles.title}>Sign in to Arduino Store</h1>
