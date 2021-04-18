@@ -1,0 +1,93 @@
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+}
+
+.socialWrapper {
+  width: 300px;
+  margin-right: 25px;
+}
+
+.socialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialItem {
+  width: 41px;
+  height: 41px;
+}
+
+.socialLink {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #235b5f;
+  display: block;
+  box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fb {
+  background-image: url("./fb.svg");
+}
+
+.inst {
+  background-image: url("./inst.svg");
+}
+
+.tw {
+  background-image: url("./tw.svg");
+}
+
+.gh {
+  background-image: url("./gh.svg");
+}
+
+.in {
+  background-image: url("./in.svg");
+}
+
+.yt {
+  background-image: url("./yt.svg");
+}
+
+.fb:hover,
+.fb:focus {
+  background-color: #3b5998;
+}
+
+.inst:hover,
+.inst:focus {
+  background-color: #c13584;
+}
+
+.tw:hover,
+.tw:focus {
+  background-color: #1da1f2;
+}
+
+.gh:hover,
+.gh:focus {
+  background-color: #211f1f;
+}
+
+.in:hover,
+.in:focus {
+  background-color: #2867b2;
+}
+
+.yt:hover,
+.yt:focus {
+  background-color: #c4302b;
+}
