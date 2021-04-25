@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 import { useHistory } from "react-router-dom";
+
+import { login } from "../../../actions/environment";
 
 import styles from "./Login.module.css";
 import logo from "./logo.svg";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const { goBack } = useHistory();
+  const [userName, setUserName] = useState("");
+  const [userPassword, setUserPassword] = useState("");
 
   const backHandler = (evt) => {
     evt.preventDefault();
     goBack();
   };
 
+  const changeUserNameHandler = (evt) => setUserName(evt.target.value);
+
+  const changeUserPasswordHandler = (evt) => setUserPassword(evt.target.value);
+
+  const submitHandler = (evt) => {
+    evt.preventDefault();
+
+    if (userName && userPassword) {
+      dispatch(login());
+      goBack();
+    }
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         {
-          // eslint-disable-next-line jsx-a11y/anchor-has-content
           <a
-            href
             className={styles.back}
             onClick={backHandler}
             aria-label="Back to Previous page"
-          ></a>
+          />
         }
         <div className={styles.formContainer}>
           <img src={logo} alt="Arduino Logo" width="60" height="30" />
@@ -31,6 +48,8 @@ const Login = () => {
           <form className={styles.form}>
             <div className={styles.inputWrapper}>
               <input
+                onChange={changeUserNameHandler}
+                value={userName}
                 className={styles.input}
                 type="text"
                 id="userLogin"
@@ -43,6 +62,8 @@ const Login = () => {
 
             <div className={styles.inputWrapper}>
               <input
+                onChange={changeUserPasswordHandler}
+                value={userPassword}
                 className={styles.input}
                 type="password"
                 id="userPassword"
@@ -55,7 +76,7 @@ const Login = () => {
             <button
               className={styles.submit}
               type="submit"
-              onClick={(evt) => evt.preventDefault()}
+              onClick={submitHandler}
             >
               sign in
             </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import cl from "classnames";
 
 import styles from "./MainMenu.module.css";
@@ -11,9 +12,9 @@ const MainMenu = ({ links, className }) => {
       {links.length
         ? links.map(({ title, link }, idx) => (
             <li className={styles.mainMenu__item} key={`${idx}-${title}`}>
-              <a className={styles.mainMenu__link} href={link}>
+              <Link className={styles.mainMenu__link} to={link}>
                 {title}
-              </a>
+              </Link>
             </li>
           ))
         : null}

@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import cn from "classnames";
 
 import styles from "./Logo.module.css";
 
 const Logo = ({ img, alt, link, width, height, className }) => {
   return (
-    <a href={link} className={cn(styles.logo, className)}>
+    <Link to={link} className={cn(styles.logo, className)}>
       <img
         className={styles.img}
         src={img}
@@ -14,7 +15,7 @@ const Logo = ({ img, alt, link, width, height, className }) => {
         width={width}
         height={height}
       />
-    </a>
+    </Link>
   );
 };
 

@@ -1,33 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
+
+import DropdownMenu from "../DropdownMenu";
 
 import styles from "./UserMenu.module.css";
 
-const UserMenu = ({ links }) => {
-  if (!links) return null;
-  return (
-    <ul className={styles.userMenu}>
-      {links.length
-        ? links.map(({ title }, idx) => (
-            <li className={styles.userMenu__item} key={`${idx}-${title}`}>
-              <button
-                className={styles.userMenu__btn}
-                aria-label={title}
-              ></button>
-            </li>
-          ))
-        : null}
-    </ul>
-  );
-};
+const UserMenu = () => {
+  const [isOpened, setIsOpened] = useState(false);
 
-UserMenu.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      link: PropTypes.string,
-    })
-  ).isRequired,
+  const openMenuHandler = () => setIsOpened((prev) => !prev);
+  return (
+    <div className={styles.wrapper}>
+      <button
+        onClick={openMenuHandler}
+        className={styles.userButton}
+        aria-label="user menu button"
+      ></button>
+      {isOpened && <DropdownMenu />}
+    </div>
+  );
 };
 
 export default UserMenu;

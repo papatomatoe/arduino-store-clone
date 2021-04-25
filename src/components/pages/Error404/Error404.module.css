@@ -1,0 +1,39 @@
+.wrapper {
+  width: 433px;
+  margin: 184px auto 0;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #454e54;
+
+  margin-bottom: 27px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0 0 9px;
+
+  color: #656c71;
+}
+
+.link {
+  color: #4fa4ab;
+}
+
+.img {
+  display: block;
+  margin: 54px auto 0;
+}

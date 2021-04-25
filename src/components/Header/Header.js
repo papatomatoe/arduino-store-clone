@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../Logo";
 import MainMenu from "../MainMenu";
 import Search from "../Search";
-import UserMenu from "../UserMenu";
+import ToolsMenu from "../ToolsMenu";
 import Login from "../Login";
 
 import styles from "./Header.module.css";
@@ -19,7 +19,7 @@ const Header = () => {
         <MainMenu links={MAIN_LINKS} />
       </nav>
       <Search />
-      <UserMenu links={USER_BTNS} />
+      <ToolsMenu links={USER_BTNS} />
       <Login />
     </header>
   );
