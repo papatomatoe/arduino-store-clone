@@ -1,0 +1,36 @@
+.menu {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  width: 100%;
+}
+
+.item {
+  border-top: 1px solid #dae3e3;
+  box-sizing: border-box;
+  padding: 7px 0 7px 38px;
+}
+
+.item:nth-last-of-type(2) {
+  border-bottom: 1px solid #dae3e3;
+}
+
+.item:last-of-type {
+  margin-top: 30px;
+  border-bottom: 1px solid #dae3e3;
+}
+
+.link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  color: #00979d;
+}
+
+.link:hover,
+.link:focus {
+  color: #006e72;
+}
