@@ -1,0 +1,14 @@
+.banners {
+  width: 100%;
+}
+
+.bannersList {
+  display: grid;
+  grid-template-rows: repeat(2, 170px);
+  grid-template-columns: 475px auto;
+  gap: 15px 20px;
+}
+
+.bannersItem:first-of-type {
+  grid-row: 1 / -1;
+}
