@@ -1,0 +1,64 @@
+.promo {
+  grid-column: 2 /-1;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 20px;
+}
+
+.promoTitle {
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 1.5;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  color: #434f54;
+}
+
+.promoToAllLink {
+  grid-column: 3 / -1;
+  align-self: end;
+  justify-self: end;
+  padding-right: 10px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #00979d;
+}
+
+.promoToAllLink::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  top: 50%;
+
+  border: 1px solid #00979d;
+  border-top: none;
+  border-left: none;
+  transform: translateY(-50%) rotateZ(-45deg);
+}
+
+.promoText {
+  grid-column: 1 / -1;
+  border-top: 2px solid #bac4c4;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0.07em;
+  padding: 10px 0;
+
+  color: #434f54;
+  margin-bottom: 36px;
+}
