@@ -7,8 +7,6 @@ import PromoList from "../../PromoList";
 
 import { sortBanners } from "../../../utils/helpers";
 
-import styles from "./Main.module.css";
-
 import {
   MAIN_PAGE_TITLE,
   BOARDS_TITLE,
@@ -82,34 +80,29 @@ const boards = [
 
 const Main = () => {
   return (
-    <PageLayout>
-      <main className={styles.main}>
-        <h1 className="visually-hidden">{MAIN_PAGE_TITLE}</h1>
-        <div className={styles.container}>
-          <AsideMenu />
-          <Banners banners={sortBanners(banners)} />
-          <PromoList
-            title={BOARDS_TITLE}
-            description={BOARDS_DESCRIPTION}
-            products={boards}
-          />
-          <PromoList
-            title={SHIELDS_TITLE}
-            description={SHIELDS_DESCRIPTION}
-            products={boards}
-          />
-          <PromoList
-            title={KITS_TITLE}
-            description={KITS_DESCRIPTION}
-            products={boards}
-          />
-          <PromoList
-            title={ACCESSORIES_TITLE}
-            description={ACCESSORIES_DESCRIPTION}
-            products={boards}
-          />
-        </div>
-      </main>
+    <PageLayout pageTitle={MAIN_PAGE_TITLE}>
+      <AsideMenu />
+      <Banners banners={sortBanners(banners)} />
+      <PromoList
+        title={BOARDS_TITLE}
+        description={BOARDS_DESCRIPTION}
+        products={boards}
+      />
+      <PromoList
+        title={SHIELDS_TITLE}
+        description={SHIELDS_DESCRIPTION}
+        products={boards}
+      />
+      <PromoList
+        title={KITS_TITLE}
+        description={KITS_DESCRIPTION}
+        products={boards}
+      />
+      <PromoList
+        title={ACCESSORIES_TITLE}
+        description={ACCESSORIES_DESCRIPTION}
+        products={boards}
+      />
     </PageLayout>
   );
 };

@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cn from "classnames";
 
 import ProductItem from "../ProductItem";
 
 import styles from "./ProductList.module.css";
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, className }) => {
   if (!products) return null;
 
   return (
-    <ul className={styles.list}>
+    <ul className={cn(styles.list, className)}>
       {products &&
         products.length &&
         products.map((product) => (
@@ -22,6 +23,7 @@ const ProductList = ({ products }) => {
 };
 
 ProductList.propTypes = {
+  className: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -32,7 +34,7 @@ ProductList.propTypes = {
         .isRequired,
       link: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default ProductList;

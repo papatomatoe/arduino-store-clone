@@ -1,0 +1,35 @@
+.main {
+  padding-top: 20px;
+}
+
+.title {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 51px;
+  margin: 0;
+}
+
+.titleInner {
+  background-color: #e5a607;
+  color: #fff;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  padding: 7px 11px;
+}
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 228px 723px;
+  grid-template-rows: repeat(3, min-content);
+
+  gap: 20px;
+}

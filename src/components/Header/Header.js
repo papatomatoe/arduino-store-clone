@@ -9,7 +9,7 @@ import Login from "../Login";
 import styles from "./Header.module.css";
 import logo from "./logo.svg";
 
-import { MAIN_LINKS, USER_BTNS } from "../../constants/header";
+import { MAIN_LINKS, USER_BTNS } from "./store.js";
 
 const Header = () => {
   return (

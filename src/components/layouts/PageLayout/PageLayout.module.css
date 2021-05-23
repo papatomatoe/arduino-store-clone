@@ -1,0 +1,13 @@
+.main {
+  padding-top: 57px;
+}
+.container {
+  width: 970px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 228px 723px;
+  grid-template-rows: repeat(3, min-content);
+
+  gap: 20px;
+}

@@ -7,7 +7,7 @@ import image404 from "./image.svg";
 
 const Error404 = () => {
   return (
-    <PageLayout>
+    <PageLayout pageTitle="error 404 page">
       <div className={styles.wrapper}>
         <h1 className={styles.title}>oops!</h1>
         <p className={styles.text}>

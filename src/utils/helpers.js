@@ -9,3 +9,9 @@ export const sortBanners = (banners) => {
 
   return [mainBanner, ...resBanners];
 };
+
+export const getLinksFromPath = (path) => {
+  const links = path.split("/");
+  links.shift();
+  return links;
+};

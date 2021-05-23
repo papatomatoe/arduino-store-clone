@@ -10,7 +10,7 @@ import styles from "./Footer.module.css";
 import footerLogo from "./footerLogo.svg";
 import SocialMenu from "../SocialMenu";
 
-import { INFO_LINKS, SOCIAL_LINKS } from "../../constants/footer";
+import { INFO_LINKS, SOCIAL_LINKS } from "./store";
 
 const Footer = () => {
   return (
