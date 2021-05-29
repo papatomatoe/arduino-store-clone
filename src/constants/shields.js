@@ -1,0 +1,1 @@
+export const FETCH_SHIELDS = "FETCH_SHIELDS";

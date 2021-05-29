@@ -6,15 +6,15 @@ import ProductList from "../ProductList";
 
 import styles from "./PromoList.module.css";
 
-const PromoList = ({ products, title, description }) => {
+const PromoList = ({ products, title, description, category }) => {
   return (
     <section className={styles.promo}>
       <h2 className={styles.promoTitle}>{title}</h2>
-      <Link className={styles.promoToAllLink} to="/boards">
+      <Link className={styles.promoToAllLink} to={`/${category}`}>
         see all
       </Link>
       <p className={styles.promoText}>{description}</p>
-      <ProductList products={products} />
+      <ProductList products={products} category={category} />
     </section>
   );
 };
@@ -33,6 +33,7 @@ PromoList.propTypes = {
   ),
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default PromoList;

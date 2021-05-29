@@ -1,6 +1,7 @@
 .wrapper {
   width: 433px;
   margin: 184px auto 184px;
+  grid-column: 1 / -1;
 }
 
 .title {

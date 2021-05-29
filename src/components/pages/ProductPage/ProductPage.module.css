@@ -1,0 +1,257 @@
+.mainInfo {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 45px 0;
+  margin-bottom: 40px;
+}
+
+.mainInfoContainer {
+  width: 787px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 517px 270px;
+}
+
+.productTitle {
+  margin: 0;
+  margin-left: 70px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.2;
+
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+
+  color: #454e54;
+}
+
+.code,
+.barcode {
+  margin-left: 70px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 1.2;
+
+  letter-spacing: 0.19em;
+
+  color: #5a6167;
+}
+
+.code .prefix,
+.barcode .prefix {
+  margin-right: 5px;
+}
+
+.price {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.price .value {
+  display: block;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.2;
+
+  letter-spacing: 0.14em;
+
+  color: #454e54;
+}
+
+.price .tax {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 1.2;
+
+  letter-spacing: 0.22em;
+
+  color: #454e54;
+}
+
+.qtyWrapper {
+  height: 35px;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qtyLabel {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+
+  color: #454e54;
+}
+
+.qtyInput {
+  box-sizing: border-box;
+  align-self: stretch;
+  width: 153px;
+  background: #ffffff;
+  border: 1px solid #e5e3e3;
+  text-align: center;
+}
+
+.addToCart {
+  width: 100%;
+  padding: 13px;
+
+  margin-bottom: 27px;
+  border: none;
+  background: #e5a607;
+  box-shadow: 0px 4px 0px #c55d0d;
+  border-radius: 2px 2px 0px 0px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.addToWish {
+  display: block;
+  margin: 0 auto;
+  width: 144px;
+  padding: 0 0 0 20px;
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-align: right;
+
+  background-image: url(to-wish.svg);
+  background-repeat: no-repeat;
+
+  color: #e5a607;
+
+  cursor: pointer;
+}
+
+.infoText {
+  text-align: center;
+  margin-top: 16px;
+  padding: 20px 0 10px;
+  border-top: 1px solid #dbe3e3;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+
+  color: #454e54;
+}
+
+.getStart {
+  width: 100%;
+  padding: 13px;
+
+  margin-bottom: 27px;
+  border: none;
+  background: #3f959c;
+  box-shadow: 0px 4px 0px #235b5f;
+  border-radius: 2px 2px 0px 0px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 228px 723px;
+  grid-template-rows: repeat(2, min-content);
+
+  gap: 20px;
+}
+
+.features {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.featuresLabel {
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  margin-right: 10px;
+}
+
+.description {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.7;
+
+  letter-spacing: 0.04em;
+
+  color: #586066;
+}
+
+.bigImage {
+  display: block;
+  margin: 0 auto;
+}
+
+.previewImagesList {
+  margin-top: 35px;
+  margin-bottom: 65px;
+  display: flex;
+}
+
+.previewImagesList li {
+  margin-right: 29px;
+}
+
+.previewImagesList button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.relatedProducts {
+  grid-column: 1 / -1;
+  margin-bottom: 100px;
+}
+
+.relatedProductsList {
+  grid-template-columns: repeat(4, 1fr);
+}

@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 
 import { getLinksFromPath } from "../../utils/helpers";
 
 import styles from "./Breadcrumbs.module.css";
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ endPoint }) => {
   const { pathname } = useLocation();
 
   const links = getLinksFromPath(pathname);
@@ -13,6 +14,8 @@ const Breadcrumbs = () => {
   const linkCount = links.length;
 
   if (!linkCount) return null;
+
+  if (endPoint) links[links.length - 1] = endPoint;
 
   return (
     <div className={styles.container}>
@@ -38,6 +41,10 @@ const Breadcrumbs = () => {
       </ul>
     </div>
   );
+};
+
+Breadcrumbs.propTypes = {
+  endPoint: PropTypes.string,
 };
 
 export default Breadcrumbs;

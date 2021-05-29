@@ -1,84 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import PageLayout from "../../layouts/PageLayout";
 import AsideMenu from "../../AsideMenu";
 import Banners from "../../Banners";
 import PromoList from "../../PromoList";
 
+import { fetchBanners } from "../../../actions/banners";
+import { fetchBoards } from "../../../actions/boards";
+import { fetchShields } from "../../../actions/shields";
+import { fetchKits } from "../../../actions/kits";
+import { fetchAccessories } from "../../../actions/accessories";
+
 import { sortBanners } from "../../../utils/helpers";
 
 import {
   MAIN_PAGE_TITLE,
   BOARDS_TITLE,
+  BOARDS_CATEGORY,
   BOARDS_DESCRIPTION,
   SHIELDS_TITLE,
+  SHIELDS_CATEGORY,
   SHIELDS_DESCRIPTION,
   KITS_TITLE,
+  KITS_CATEGORY,
   KITS_DESCRIPTION,
   ACCESSORIES_TITLE,
+  ACCESSORIES_CATEGORY,
   ACCESSORIES_DESCRIPTION,
 } from "./store";
 
-import bannerImage1 from "./assets/banner_1.jpg";
-import bannerImage2 from "./assets/banner_2.jpg";
-import bannerImage3 from "./assets/banner_3.jpg";
-import boardImg1 from "./assets/board_1.jpg";
-import boardImg2 from "./assets/board_2.jpg";
-import boardImg3 from "./assets/board_3.jpg";
-
-const banners = [
-  {
-    id: 2,
-    link: "/",
-    image: bannerImage2,
-    alt: "banner 2",
-  },
-  {
-    id: 1,
-    link: "/",
-    image: bannerImage1,
-    alt: "banner 1",
-    isMain: true,
-  },
-  {
-    id: 3,
-    link: "/",
-    image: bannerImage3,
-    alt: "banner 3",
-  },
-];
-
-const boards = [
-  {
-    id: 1,
-    title: "arduino uno rev3",
-    description:
-      "The Arduino UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with. The UNO is the most used and documented board of the whole Arduino family.",
-    image: boardImg1,
-    price: 23.0,
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "arduino nano every - pack",
-    description:
-      "Get the Nano Every in bulk to run a course or power all of your projects with Arduino.",
-    image: boardImg2,
-    price: 28.2,
-    link: "/",
-  },
-  {
-    id: 3,
-    title: "arduino nano 33 ble sense",
-    description:
-      "Bring the power of AI to your pocket with Arduino’s tiniest form factor.",
-    image: boardImg3,
-    price: 31.1,
-    link: "/",
-  },
-];
-
 const Main = () => {
+  const dispatch = useDispatch();
+  const bannersState = useSelector((state) => state.banners);
+  const boardsState = useSelector((state) => state.boards);
+  const shieldsState = useSelector((state) => state.shields);
+  const kitsState = useSelector((state) => state.kits);
+  const accessoriesState = useSelector((state) => state.accessories);
+
+  useEffect(() => {
+    dispatch(fetchBanners());
+    dispatch(fetchBoards());
+    dispatch(fetchShields());
+    dispatch(fetchKits());
+    dispatch(fetchAccessories());
+  }, [dispatch]);
+
+  const { banners } = bannersState;
+  const { boardsPromo } = boardsState;
+  const { shieldsPromo } = shieldsState;
+  const { kitsPromo } = kitsState;
+  const { accessoriesPromo } = accessoriesState;
   return (
     <PageLayout pageTitle={MAIN_PAGE_TITLE}>
       <AsideMenu />
@@ -86,22 +58,26 @@ const Main = () => {
       <PromoList
         title={BOARDS_TITLE}
         description={BOARDS_DESCRIPTION}
-        products={boards}
+        category={BOARDS_CATEGORY}
+        products={boardsPromo}
       />
       <PromoList
         title={SHIELDS_TITLE}
         description={SHIELDS_DESCRIPTION}
-        products={boards}
+        category={SHIELDS_CATEGORY}
+        products={shieldsPromo}
       />
       <PromoList
         title={KITS_TITLE}
         description={KITS_DESCRIPTION}
-        products={boards}
+        category={KITS_CATEGORY}
+        products={kitsPromo}
       />
       <PromoList
         title={ACCESSORIES_TITLE}
         description={ACCESSORIES_DESCRIPTION}
-        products={boards}
+        category={ACCESSORIES_CATEGORY}
+        products={accessoriesPromo}
       />
     </PageLayout>
   );

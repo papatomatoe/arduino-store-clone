@@ -1,0 +1,84 @@
+.title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+
+  letter-spacing: 0.05em;
+
+  color: #e5a607;
+}
+
+.docDescription {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 153.9%;
+
+  letter-spacing: 0.04em;
+
+  color: #7a8085;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+}
+
+.links li {
+  width: 32%;
+  margin-right: 12px;
+}
+
+.links a {
+  display: block;
+  width: 100%;
+  background-color: tomato;
+  padding: 10px;
+  padding-left: 110px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 153.9%;
+  /* or 23px */
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.links li:nth-of-type(1) a {
+  background-color: #e5ce00;
+  background-image: url(eagle.svg);
+}
+.links li:nth-of-type(2) a {
+  background-color: #99876d;
+  background-image: url(schema.svg);
+}
+.links li:nth-of-type(3) a {
+  background-color: #d88723;
+  background-image: url(size.svg);
+}
+
+.download {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 157.9%;
+
+  letter-spacing: 0.05em;
+
+  color: #767c81;
+}
+
+.download a {
+  color: #5aacb2;
+}

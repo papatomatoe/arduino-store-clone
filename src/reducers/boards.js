@@ -2,21 +2,17 @@ import { FETCH_BOARDS } from "../constants/boards";
 
 const initialState = {
   boards: [],
+  boardsPromo: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_BOARDS:
-      const boards = action.payload.map((board) => ({
-        id: board.id,
-        title: board.title,
-        description: board.description,
-        image: board.images.list,
-        price: board.price,
-        link: board.link || "boards",
-      }));
-
-      return { ...state, boards };
+      return {
+        ...state,
+        boards: action.payload,
+        boardsPromo: action.payload.slice(0, 3),
+      };
     default:
       return state;
   }

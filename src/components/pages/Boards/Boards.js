@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import ProductGroup from "../../layouts/ProductGroup";
-import ProductList from "../../ProductList";
+import ProductsPage from "../ProductsPage";
 
 import { fetchBoards } from "../../../actions/boards";
 
-import styles from "./Boards.module.css";
+import { PAGE_TITLE, CATEGORY } from "./store";
 
 const Boards = () => {
   const state = useSelector((state) => state.boards);
@@ -16,14 +15,14 @@ const Boards = () => {
 
   const { boards } = state;
 
+  console.log(boards);
+
   return (
-    <ProductGroup pageTitle="Boards &amp; Modules">
-      {!boards.length ? (
-        <p>Loading</p>
-      ) : (
-        <ProductList className={styles.boards} products={boards} />
-      )}
-    </ProductGroup>
+    <ProductsPage
+      pageTitle={PAGE_TITLE}
+      products={boards}
+      category={CATEGORY}
+    />
   );
 };
 

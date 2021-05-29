@@ -5,13 +5,13 @@ import cn from "classnames";
 
 import styles from "./Banner.module.css";
 
-const Banner = ({ link, image, alt, className }) => {
+const Banner = ({ url, src, description, className }) => {
   return (
-    <Link className={styles.bannersLink} to={link}>
+    <Link className={styles.bannersLink} to={url}>
       <img
         className={cn(styles.bannersImg, className)}
-        src={image}
-        alt={alt}
+        src={src}
+        alt={description}
         width="475"
         height="356"
       />
@@ -23,11 +23,11 @@ Banner.displayName = "Banner";
 
 Banner.propTypes = {
   /** Link to promo */
-  link: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   /** Banner image */
-  image: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
   /** Alternative text */
-  alt: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   /** Additional className for image */
   className: PropTypes.string,
 };

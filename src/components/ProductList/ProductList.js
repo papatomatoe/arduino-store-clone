@@ -6,7 +6,7 @@ import ProductItem from "../ProductItem";
 
 import styles from "./ProductList.module.css";
 
-const ProductList = ({ products, className }) => {
+const ProductList = ({ products, category, className }) => {
   if (!products) return null;
 
   return (
@@ -15,7 +15,7 @@ const ProductList = ({ products, className }) => {
         products.length &&
         products.map((product) => (
           <li key={product.id} className={styles.item}>
-            <ProductItem {...product} />
+            <ProductItem {...product} link={`/${category}/${product.link}`} />
           </li>
         ))}
     </ul>
@@ -24,6 +24,7 @@ const ProductList = ({ products, className }) => {
 
 ProductList.propTypes = {
   className: PropTypes.string,
+  category: PropTypes.string.isRequired,
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
