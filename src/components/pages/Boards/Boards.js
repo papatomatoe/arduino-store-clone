@@ -15,8 +15,6 @@ const Boards = () => {
 
   const { boards } = state;
 
-  console.log(boards);
-
   return (
     <ProductsPage
       pageTitle={PAGE_TITLE}

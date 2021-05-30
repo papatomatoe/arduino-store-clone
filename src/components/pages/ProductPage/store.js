@@ -7,7 +7,7 @@ export const PALLET = [
   "#99876D",
   "#42A184",
   "#3F959C",
-  "$E5A607",
+  "#E5A607",
 ];
 
 export const TABS = ["overview", "tech specs", "document"];

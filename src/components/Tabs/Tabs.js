@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import cn from "classnames";
 
 import styles from "./Tabs.module.css";
@@ -33,5 +34,13 @@ const Tabs = ({ tabs }) => {
     </>
   );
 };
-
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      Content: PropTypes.elementType.isRequired,
+      props: PropTypes.objectOf(PropTypes.any),
+    })
+  ).isRequired,
+};
 export default Tabs;

@@ -7,6 +7,7 @@ import { fetchBoards } from "../../../actions/boards";
 
 import ProductLayout from "../../layouts/ProductLayout";
 import Breadcrumbs from "../../Breadcrumbs";
+import Section from "../../Section";
 import AsideMenu from "../../AsideMenu";
 import ProductList from "../../ProductList";
 import Tabs from "../../Tabs";
@@ -35,15 +36,22 @@ const ProductPage = () => {
     dispatch(fetchBoards());
   }, [dispatch, name]);
 
-  const changeHandler = (evt) => setProductQty(evt.target.value);
+  const changeHandler = (evt) => {
+    const qty = evt.target.value;
+    const newQty = qty > product.qty ? product.qty : qty;
+    setProductQty(newQty);
+  };
+
   const previewHandler = (index) => setSelectedImageIndex(index);
 
   return (
     <ProductLayout pageTitle={product?.title || "product page"}>
       {product ? (
         <>
-          <section className={styles.mainInfo}>
-            <h2 className="visually-hidden">Product purchase information</h2>
+          <Section
+            className={styles.mainInfo}
+            sectionTitle={"Product purchase information"}
+          >
             <div className={styles.mainInfoContainer}>
               <div className={styles.leftCol}>
                 <h3 className={styles.productTitle}>{product.title}</h3>
@@ -98,14 +106,13 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-          </section>
+          </Section>
           <div className={styles.content}>
             <Breadcrumbs endPoint={product.title} />
             <div className={styles.container}>
               <AsideMenu />
               <div className={styles.wrapper}>
-                <section>
-                  <h2 className="visually-hidden">Product description</h2>
+                <Section sectionTitle={"Product description"}>
                   <ul className={styles.features}>
                     {product.labels && product.labels.length
                       ? product.labels.map((label, index) => (
@@ -120,16 +127,17 @@ const ProductPage = () => {
                       : null}
                   </ul>
                   <p className={styles.description}>{product.description}</p>
-                </section>
-                <section>
-                  <h2 className="visually-hidden">Product Images</h2>
+                </Section>
+                <Section sectionTitle={"Product Images"}>
                   <div className={styles.imagedWrapper}>
                     <div className={styles.bigImageWrapper}>
-                      <img
-                        className={styles.bigImage}
-                        src={product.images.full[selectedImageIndex]}
-                        alt={`${product.title}`}
-                      />
+                      {product.images.full && product.images.full.length ? (
+                        <img
+                          className={styles.bigImage}
+                          src={product.images.full[selectedImageIndex]}
+                          alt={`${product.title}`}
+                        />
+                      ) : null}
                     </div>
                     <div className={styles.previewImagesWrapper}>
                       <ul className={styles.previewImagesList}>
@@ -154,7 +162,7 @@ const ProductPage = () => {
                       </ul>
                     </div>
                   </div>
-                </section>
+                </Section>
               </div>
               <Tabs
                 tabs={[
@@ -180,14 +188,17 @@ const ProductPage = () => {
                   },
                 ]}
               />
-              <section className={styles.relatedProducts}>
-                <h2>Related Products</h2>
+              <Section
+                className={styles.relatedProducts}
+                sectionTitle={"Related Products"}
+                isVisibleTitle
+              >
                 <ProductList
                   className={styles.relatedProductsList}
                   category={"boards"}
                   products={boards.slice(0, 3)}
                 />
-              </section>
+              </Section>
             </div>
           </div>
         </>

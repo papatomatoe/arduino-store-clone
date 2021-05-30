@@ -252,6 +252,18 @@
   margin-bottom: 100px;
 }
 
+.relatedProducts h2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: #9d8c73;
+}
+
 .relatedProductsList {
   grid-template-columns: repeat(4, 1fr);
 }

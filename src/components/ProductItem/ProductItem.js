@@ -11,6 +11,8 @@ const ProductItem = ({ description, title, image, price, link }) => {
   const [isError, setIsError] = useState(false);
   const img = image || noImage;
 
+  const onErrorHandler = () => setIsError(true);
+
   return (
     <>
       <div className={styles.imgContainer}>
@@ -26,7 +28,7 @@ const ProductItem = ({ description, title, image, price, link }) => {
           alt={title}
           width="227"
           height="170"
-          onError={() => setIsError(true)}
+          onError={onErrorHandler}
         />
       </div>
       <p className={styles.price}>$ {price.toFixed(2)}</p>
