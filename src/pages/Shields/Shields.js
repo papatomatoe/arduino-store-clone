@@ -3,22 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 
 import ProductsPage from "../ProductsPage";
 
-import { fetchBoards } from "../../../actions/boards";
+import { fetchShields } from "../../actions/shields";
 
 import { PAGE_TITLE, CATEGORY } from "./store";
 
 const Boards = () => {
-  const state = useSelector((state) => state.boards);
+  const state = useSelector((state) => state.shields);
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(fetchBoards()), [dispatch]);
+  useEffect(() => dispatch(fetchShields()), [dispatch]);
 
-  const { boards } = state;
+  const { shields } = state;
 
   return (
     <ProductsPage
       pageTitle={PAGE_TITLE}
-      products={boards}
+      products={shields}
       category={CATEGORY}
     />
   );

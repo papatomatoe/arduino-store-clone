@@ -1,27 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Header from "../../Header";
-import Footer from "../../Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-import styles from "./ProductLayout.module.css";
+import styles from "./PageLayout.module.css";
 
-const ProductLayout = ({ pageTitle, children }) => {
+const PageLayout = ({ pageTitle, children }) => {
   return (
     <>
       <Header />
       <main className={styles.main}>
         <h1 className="visually-hidden">{pageTitle}</h1>
-        {children}
+        <div className={styles.container}>{children}</div>
       </main>
       <Footer />
     </>
   );
 };
 
-ProductLayout.propTypes = {
+PageLayout.propTypes = {
   pageTitle: PropTypes.string.isRequired,
   children: PropTypes.any,
 };
 
-export default ProductLayout;
+export default PageLayout;

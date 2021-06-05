@@ -33,3 +33,16 @@
 
   gap: 20px;
 }
+
+.wrapper {
+  display: flex;
+  width: 970px;
+  margin: 40px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs {
+  width: auto;
+  margin: 0;
+}

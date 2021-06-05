@@ -3,25 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 
 import ProductsPage from "../ProductsPage";
 
-import { fetchShields } from "../../../actions/shields";
+import { fetchAccessories } from "../../actions/accessories";
 
 import { PAGE_TITLE, CATEGORY } from "./store";
 
-const Boards = () => {
-  const state = useSelector((state) => state.shields);
+const Accessories = () => {
+  const state = useSelector((state) => state.accessories);
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(fetchShields()), [dispatch]);
+  useEffect(() => dispatch(fetchAccessories()), [dispatch]);
 
-  const { shields } = state;
+  const { accessories } = state;
 
   return (
     <ProductsPage
       pageTitle={PAGE_TITLE}
-      products={shields}
+      products={accessories}
       category={CATEGORY}
     />
   );
 };
 
-export default Boards;
+export default Accessories;

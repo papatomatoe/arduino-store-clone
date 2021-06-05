@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import PageLayout from "../../layouts/PageLayout";
-import AsideMenu from "../../AsideMenu";
-import Banners from "../../Banners";
-import PromoList from "../../PromoList";
+import AsideMenu from "../../components/AsideMenu";
+import Banners from "../../components/Banners";
+import PromoList from "../../components/PromoList";
 
-import { fetchBanners } from "../../../actions/banners";
-import { fetchBoards } from "../../../actions/boards";
-import { fetchShields } from "../../../actions/shields";
-import { fetchKits } from "../../../actions/kits";
-import { fetchAccessories } from "../../../actions/accessories";
+import { fetchBanners } from "../../actions/banners";
+import { fetchBoards } from "../../actions/boards";
+import { fetchShields } from "../../actions/shields";
+import { fetchKits } from "../../actions/kits";
+import { fetchAccessories } from "../../actions/accessories";
 
-import { sortBanners } from "../../../utils/helpers";
+import { sortBanners } from "../../utils/helpers";
 
 import {
   MAIN_PAGE_TITLE,

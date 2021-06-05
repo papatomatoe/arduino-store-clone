@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchProduct } from "../../../actions/product";
-import { fetchBoards } from "../../../actions/boards";
+import { fetchProduct } from "../../actions/product";
+import { fetchBoards } from "../../actions/boards";
 
 import ProductLayout from "../../layouts/ProductLayout";
-import Breadcrumbs from "../../Breadcrumbs";
-import Section from "../../Section";
-import AsideMenu from "../../AsideMenu";
-import ProductList from "../../ProductList";
-import Tabs from "../../Tabs";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import Section from "../../components/Section";
+import AsideMenu from "../../components/AsideMenu";
+import ProductList from "../../components/ProductList";
+import Tabs from "../../components/Tabs";
 
 import Overview from "./Overview";
 import TechSpecs from "./TechSpecs";

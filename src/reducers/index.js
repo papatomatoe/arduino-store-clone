@@ -7,6 +7,7 @@ import shields from "./shields";
 import kits from "./kits";
 import accessories from "./accessories";
 import product from "./product";
+import cart from "./cart";
 
 const rootReducer = combineReducers({
   environment,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   kits,
   accessories,
   product,
+  cart,
 });
 
 export default rootReducer;

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { useHistory } from "react-router-dom";
 
-import { login } from "../../../actions/environment";
+import { login } from "../../actions/environment";
 
 import styles from "./Login.module.css";
 import logo from "./logo.svg";

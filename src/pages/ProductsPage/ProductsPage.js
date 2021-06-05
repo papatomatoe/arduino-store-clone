@@ -1,7 +1,7 @@
 import React from "react";
 
 import ProductGroup from "../../layouts/ProductGroup";
-import ProductList from "../../ProductList";
+import ProductList from "../../components/ProductList";
 
 import styles from "./ProductsPage.module.css";
 

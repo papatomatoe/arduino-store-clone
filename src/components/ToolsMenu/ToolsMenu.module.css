@@ -1,14 +1,48 @@
+.userWrapper {
+  position: relative;
+  display: flex;
+  width: 127px;
+}
 .userMenu {
   display: flex;
   width: 127px;
 }
 
 .userMenu__item {
+  position: relative;
   width: 50%;
   border-right: 1px solid #fff;
 }
 
+.userMenu__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 13px;
+  left: 35px;
+
+  background: #f1c40f;
+  border-radius: 50%;
+}
+
+.userMenu__label p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
 .userMenu__btn {
+  display: block;
   border: none;
   background-color: transparent;
   width: 100%;

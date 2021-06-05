@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
 
 import styles from "./Sorting.module.css";
 
@@ -12,19 +14,23 @@ const SORTING_LIST = [
   { id: 7, title: "newest to oldest" },
 ];
 
-const Sorting = () => {
+const Sorting = ({ className }) => {
   const [value, setValue] = useState(SORTING_LIST[0].title);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropDownHandler = () => setIsOpen((prev) => !prev);
 
-  const selectItemHandler = (evt) => setValue(evt.target.dataset.value);
+  const selectItemHandler = (evt) => {
+    console.log(evt);
+    setValue(evt.target.dataset.value);
+  };
 
   return (
-    <div className={styles.container}>
-      <label>
-        <span>sort by</span>
+    <div className={cn(styles.container, className)}>
+      <label className={styles.label}>
+        <span className={styles.labelText}>sort by</span>
         <input
+          className={styles.input}
           type="text"
           readOnly
           value={value}
@@ -33,8 +39,10 @@ const Sorting = () => {
         {isOpen && (
           <ul className={styles.list}>
             {SORTING_LIST.map(({ id, title }) => (
-              <li key={id} onClick={selectItemHandler}>
-                <span data-value={title}>{title}</span>
+              <li key={id} className={styles.item} onClick={selectItemHandler}>
+                <span className={styles.itemText} data-value={title}>
+                  {title}
+                </span>
               </li>
             ))}
           </ul>
@@ -42,6 +50,10 @@ const Sorting = () => {
       </label>
     </div>
   );
+};
+
+Sorting.propTypes = {
+  classNames: PropTypes.string,
 };
 
 export default Sorting;

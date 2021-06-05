@@ -1,10 +1,10 @@
 import React from "react";
 
-import Header from "../../Header";
-import Footer from "../../Footer";
-import AsideMenu from "../../AsideMenu";
-import Breadcrumbs from "../../Breadcrumbs";
-import Sorting from "../../Sorting";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import AsideMenu from "../../components/AsideMenu";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import Sorting from "../../components/Sorting";
 
 import styles from "./ProductGroup.module.css";
 
@@ -17,7 +17,10 @@ const ProductGroup = ({ pageTitle, children }) => {
           <span className={styles.titleInner}>{pageTitle}</span>
         </h1>
 
-        <Breadcrumbs />
+        <div className={styles.wrapper}>
+          <Breadcrumbs className={styles.breadcrumbs} />
+          <Sorting className={styles.sorting} />
+        </div>
         <div className={styles.container}>
           <AsideMenu />
           {children}

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import ProductsPage from "../ProductsPage";
 
-import { fetchKits } from "../../../actions/kits";
+import { fetchKits } from "../../actions/kits";
 
 import { PAGE_TITLE, CATEGORY } from "./store";
 

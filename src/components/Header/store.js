@@ -5,6 +5,6 @@ export const MAIN_LINKS = [
   { title: "accessories", link: "/accessories" },
 ];
 export const USER_BTNS = [
-  { title: "Cart", link: "/cart" },
-  { title: "Favorites", link: "/favorites" },
+  { title: "cart", link: "/cart" },
+  { title: "favorites", link: "/favorites" },
 ];
