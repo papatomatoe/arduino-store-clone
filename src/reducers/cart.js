@@ -8,21 +8,18 @@ const reducer = (state = initialState, action) => {
     case ADD_TO_CART:
       const cloneState = { ...state };
       const product = action.payload;
-
       const products = cloneState.products;
-
       const idx = products.findIndex((item) => item.id === product.id);
 
-      if (idx === -1) {
-        product.qty = 1;
-        products.push(product);
-      } else {
-        products.map((el, i) =>
-          i === idx ? { ...el, qty: (el.qty += 1) } : el
-        );
-      }
-
-      return { ...state, products };
+      const newProducts =
+        idx === -1
+          ? [...products, { ...product, qty: 1 }]
+          : [
+              ...products.slice(0, idx),
+              { ...products[idx], qty: (products[idx].qty += 1) },
+              ...products.slice(idx + 1),
+            ];
+      return { ...state, products: newProducts };
     default:
       return state;
   }
